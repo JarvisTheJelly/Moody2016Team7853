@@ -9,7 +9,6 @@ MILEAGE_TYPES = {"LOW":    0,
                  "HIGH":   (MEAN_PER_TRIP + STANDARD_DEVIATION_PER_TRIP) * AVERAGE_NUM_TRIPS}
 # MILEAGE_TYPES are the classifications based on how many miles per day.
 
-
 MEAN_TIME_PER_TRIP = 19.1
 STANDARD_DEVIATION_TIME_PER_TRIP = 20.3
 # Data taken from http://nhts.ornl.gov/2009/pub/stt.pdf p37
