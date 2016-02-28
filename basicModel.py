@@ -6,8 +6,13 @@ MILEAGE_TYPES = {"LOW": 0,
 TIME_TYPES = {"LOW": 0, "MEDIUM": 2, "HIGH": 4}
 # TIME_TYPES are the classifications based on how many hours per day.
 
-def what_type(mileage, time):
+TYPE_VAULES = {"LOW": 0, "MEDIUM": 1, "HIGH": 2}
+
+def what_type(mileage, time, return_as_string=True):
+    """Returns the category of driver someone falls into."""
+    
     mile_type = time_type = None
+
     if mileage < MILEAGE_TYPES["MEDIUM"]:
         mile_type = "LOW"
     elif mileage < MILEAGE_TYPE["HIGH"]:
@@ -22,4 +27,8 @@ def what_type(mileage, time):
     else:
         time_type = "HIGH"
 
-    return mile_type, time_type
+    if return_as_string:
+        return mile_type, time_type
+    else:
+        # This should return a different number for each type pair
+        return TYPE_VALUES[mile_type] * 3 + TYPE_VALUES[time_type]
